@@ -25,14 +25,19 @@ python ./download.py <file_id> ./tmp/temp_video_file.mp4
 python ./extract.py ./tmp/temp_video_file.mp4 ./tmp/temp_audio_file.mp3
 ```
 
-
-### 3) Transcribe
-
+### 3) Chunk Audio
 ```
-python ./transcribe.py ./tmp/temp_audio_file.mp3 ./tmp/transcript.txt
+python ./chunk.py ./tmp/temp_audio_file.mp3 ./tmp/chunks
 ```
 
-### 4) Document
+
+### 4) Transcribe
+
+```
+python ./transcribe.py ./tmp/chunks ./tmp/transcript.txt
+```
+
+### 5) Document
 ```
 python ./document.py ./tmp/transcript.txt ./tmp/meeting.md
 ```
